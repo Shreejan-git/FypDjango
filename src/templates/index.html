@@ -1,0 +1,162 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Detection</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/webcss.css'%}">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+   <style>
+     .header{
+         clip-path: polygon(100% 0%, 100% 75%, 50% 100%, 0% 75%, 0 0);
+     }
+   </style>
+</head>
+<body>
+<div class="header" id="topheader">
+  <nav class="navbar navbar-expand-lg">
+        <div class="container text-uppercase p-2">
+  <a class="navbar-brand" href="/index">Herald Diabetes Detection</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="/index">Diabetes and Symptoms <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Diet">Diabetes Diet <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/checkdiabetes">Diabetes Tester</a>
+      </li>
+    </ul>
+  </div>
+        </div>
+</nav>
+
+<section class="header-section">
+  <div class="center-div">
+
+    <h1 class="font-weight-bold"> Artificial Intelligence Diabetes Tester </h1>
+    <p> SHREE AI-WEB APPLICATION </p>
+    <div class="header-buttons">
+        <a href="#footerdiv"> ABOUT US </a>
+        <a href="/checkdiabetes"> TEST DIABETES </a>
+   </div>
+  </div>
+  </section>
+</div>
+
+<!-- ************************header parts ends*************************/ -->
+
+<!-- ****************************Three extra headers parts starts from here********************************* -->
+<section class="header-extradiv">
+  <div class="container">
+    <div class="row">
+      <div class=" extra-div col-lg-4 col-md-4 col-12">
+        <a href="/symptom"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+        <h2> DIABETES AND SYMPTOM</h2>
+        <p> Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. </p>
+       </div>
+
+       <div class=" extra-div col-lg-4 col-md-4 col-12">
+        <a href="/Diet"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+        <h2> DIABETES DIET</h2>
+        <p> Whether you have diabetes or not, eating healthy should always be your concern. We have all suggesations and guidelines for perfect diet plan even if in-case you have diabetes. </p>
+       </div>
+
+       <div class=" extra-div col-lg-4 col-md-4 col-12">
+        <a href="/checkdiabetes"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+        <h2> DIABETES TESTER</h2>
+        <p> This is the first web application which has atificial intelligence system which will help you to check whether you have diabetes or not. </p>
+       </div>
+    </div>
+  </div>
+  </section>
+<!-- ****************************Three extra headers parts ends from here********************************* -->
+
+
+<!-- ***********************************contact us part start from here******************************** -->
+<section class="contactus" id="contactid">
+    <div class="container headings text-center">
+      <h1 class="text-center font-weight-bold">CONTACT US</h1>
+      <p class="text-capitalize pt-1">We're Here To Help And Answer Any Question You Might Have.</p>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 col-10 offset-lg-2 offset-md-2 col-1">
+
+           <form action="/action_page.php">
+               <div class="form-group">
+                  <input type="text" class="form-control"  id="username" required autocomplete="off" placeholder="Enter Your Username">
+                </div>
+
+               <div class="form-group">
+                  <input type="email" class="form-control"  id="email" required autocomplete="off" placeholder="Enter Your Email">
+                </div>
+
+
+                 <div class="form-group">
+                      <textarea class="form-control" rows="4" id="comment" placeholder="Enter Your Message"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-center form-button">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+              </form>
+            </div>
+       </div>
+      </div>
+  </section>
+  <!-- ***********************************contact us part end  here******************************** -->
+
+
+<!-- ****************footer starts here******************** -->
+
+<footer class="footersection" id="footerdiv">
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 col-12 footer-div">
+        <div>
+          <h3>ABOUT SHREE AI-WEB </h3>
+          <p> Namaste. Welcome to Shree AI-Web's Diabetes Prediction Web Application. We build all kinds of web application having AI in it. We build normal recommendation system to complex AI model which can predict the required things. Fee free to contact us at anytime. </p>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-md-6 col-12 footer-div text-center">
+        <div>
+          <h3>NAVIGATION LINKS </h3>
+          <li> <a href="/symptom">DIABETES AND SYMPTOM</a> </li>
+            <li> <a href="/Diet">DIABETES DIET</a></li>
+              <li> <a href="/checkdiabetes">DIABETES TESTER</a></li>
+        </div>
+      </div>
+
+        <div class="col-lg-4 col-md-12 col-12 footer-div">
+        <div>
+          <h3> HERALD DIABETES DETECTION </h3>
+          <p> Diabetes is the serious issue through out the world. Due this reason, we have build a web-app which has AI integrated system. This web-app will be helpful to everyone who wants to know the things related too diabetes and check their dibetes status for free of cost. To check the diabetes, user just have to provide the required report to fit in the model for detection. ALL THE BEST.  </p>
+        </div>
+      </div>
+        </div>
+      <div class="mt-5 text-center">
+        <p>Copyright ©2020 All rights reserved to Shree AI-Web Application</p>
+      </div>
+</footer>
+
+<!-- ****************footer ends here******************** -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

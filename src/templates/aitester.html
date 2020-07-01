@@ -1,0 +1,104 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" type="text/css" href="{%static 'css/webcss.css'%}">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+
+
+<div class="header" id="topheader">
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container text-uppercase p-2">
+  <a class="navbar-brand" href="/index">Herald Diabetes Detection</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="/symptom">Diabetes and Symptoms <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Diet">Diabetes Diet <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/checkdiabetes">Diabetes Tester</a>
+      </li>
+    </ul>
+  </div>
+        </div>
+</nav>
+</div>
+
+  </div>
+  <section class="test-form">
+    <div class="container">
+      <h1 class="text-center">ARE YOU AT RISK ?</h1>
+        <form action="." method="post">
+          {% csrf_token %}
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputState">Pregnancy</label>
+              <input type="number" value="0" name="pregnancy"  class="form-control" placeholder="Eg: Pregnancy">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Glucose</label>
+              <input type="number" value="0" name="glucose" required class="form-control" placeholder=" Eg: Glucose">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Blood Pressure</label>
+              <input type="number" value="0" name="blood_pressure" required class="form-control" placeholder="Eg: Blood Pressure">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputState">Skin Thickness</label>
+              <input type="number" value="0" name="skin_thickness" required class="form-control" placeholder="Eg: Skin Thickness">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Insulin</label>
+              <input type="number" value="0" name="insulin" required class="form-control" placeholder="Eg: Insulin">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">BMI</label>
+              <input type="number" value="0" name="bmi" required class="form-control" placeholder="Eg: BMI">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputState">Diabetees Pedigree Function</label>
+              <input type="number" value="0" name="diabetes_pedigree_fucntion" required class="form-control" placeholder="Eg: Diabetees Pedigree Function">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputState">Age</label>
+              <input type="number" value="0" name="age" required class="form-control" placeholder="Eg: Age">
+            </div>
+          </div>
+          <button type=submit' value='Save' class="btn btn-success">Check</button>
+        </form>
+      </div>
+  </section>
+
+<u> <h2>Detail of your medical report </h2> </u>
+<h3> The value of pregnancy = {{pregnancy}} </h3>
+<h3>The value of glucose= {{glucose}}</h3>
+<h3> The value of blood pressure= {{blood_pressure}} </h3>
+<h3>The value of skin thickness= {{skin_thickness}} </h3>
+<h3>The value of insulin= {{insulin }}</h3>
+<h3>The value of bmi= {{bmi}} </h3>
+<h3>The value of diabetes pedigree fucntion= {{diabetes_pedigree_fucntion}} </h3>
+<h3>The value of age= {{age}} </h3>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

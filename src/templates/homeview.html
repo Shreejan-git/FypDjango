@@ -1,0 +1,25 @@
+
+{% extends 'base.html'  %}
+{% block content%}
+{{ request.user }}
+<h1>Hello world this is a home view. The new page</h1>
+{{ request.user }}
+<p>
+
+    {{ my_text }},
+    {{ my_number }}
+
+
+
+</p>
+
+<ul>
+    {% for my_sub_list in my_list%}
+
+        <li> {{forloop.counter}} = {{my_sub_list}}</li>
+
+    {% endfor %}
+
+</ul>
+
+{% endblock %}

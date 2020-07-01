@@ -1,0 +1,82 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Tester</title>
+     <link rel="stylesheet" type="text/css" href="{%static 'css/webcss.css'%}">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="header" id="topheader">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container text-uppercase p-2">
+  <a class="navbar-brand" href="/index">Herald Diabetes Detection</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="/symptom">Diabetes and Symptoms <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/Diet">Diabetes Diet <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/checkdiabetes">Diabetes Tester</a>
+      </li>
+    </ul>
+  </div>
+        </div>
+</nav>
+</div>
+
+  </div>
+
+<section>
+    <div class="container">
+        <h1 class="text-center">ARE YOU AT RISK ?</h1>
+
+<form action='.' method="POST"> {% csrf_token %}
+    {{form.as_p}}
+    <input type='submit' value='Save' >
+</form>
+    </div>
+
+</section>
+
+<section>
+    <div class="container">
+        <h1 class="text-center">Detail of your medical report</h1>
+            <h5> The value of pregnancy = {{object.pregnancy}} </h5>
+            <h5>The value of glucose= {{object.glucose}}</h5>
+            <h5> The value of blood pressure= {{object.blood_pressure}} </h5>
+            <h5>The value of skin thickness= {{object.skin_thickness}} </h5>
+            <h5>The value of insulin= {{object.insulin }}</h5>
+            <h5>The value of bmi= {{object.bmi}} </h5>
+            <h5>The value of diabetes pedigree fucntion= {{object.diabetes_pedigree_fucntion}} </h5>
+            <h5>The value of age= {{object.age}} </h5>
+        </div>
+</section>
+
+<section>
+    <div class="container" >
+        <h1>Our model has predicted the value:{{prediction}}</h1>
+        {% if prediction >= 0.5 %}
+            <h2> Your medical report has shown Diabetes Positive.</h2>
+        {% elif prediction < 0.5 %}
+            <h2>Contragulation!! Your medical report has shown Diabetes Negative</h2>
+        {% else %}
+            <h2>Fill the form for your diabetes result...</h2>
+        {% endif %}
+    </div>
+
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

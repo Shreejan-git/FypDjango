@@ -1,0 +1,35 @@
+
+
+
+
+<!--<h1>Hello world Home page</h1>-->
+<!--{{request.user}}-->
+
+<!--<p>{{name}},{{position}}-->
+<!--    {{List}}-->
+<!--</p>-->
+
+<!--<ul>-->
+<!--    <li>item1</li>-->
+<!--    <li>item2</li>-->
+<!--</ul>-->
+
+<!--<ul>-->
+<!--{%  for myitems in List  %}-->
+<!--    <li>{{myitems}}</li>-->
+<!--    {% endfor %}-->
+<!--</ul>-->
+
+<div class="container">
+    <h1>HOME</h1>
+    <form method="post">
+        {% csrf_token  %}
+        {{ form.as_p }}
+
+        <button type="submit">Submit</button>
+
+   </form>
+</div>
+
+
+
